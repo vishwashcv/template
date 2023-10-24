@@ -1,0 +1,606 @@
+/* Resets */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img,
+video {
+  width: 100%;
+}
+
+/* Fonts */
+@font-face {
+  font-family: "PP Editorial New Italic";
+  src: url("../assets/fonts/PPEditorialNew-Italic.otf");
+}
+
+@font-face {
+  font-family: "PP Editorial New";
+  src: url("../assets/fonts/PPEditorialNew-Regular.otf");
+}
+
+@font-face {
+  font-family: "PP Neue Montreal";
+  src: url("../assets/fonts/PPNeueMontreal-Medium.otf");
+}
+
+/* Variables */
+:root {
+  --light-bg: #ebeae4;
+  --all-bg: #dad9d3;
+  --dark-coffee: #3f3b37;
+  --coal-lemon: #caca17;
+  --creamy-milk: #fafafa;
+}
+
+/* Base Styles */
+body {
+  padding: 1rem;
+  background: var(--all-bg, #dad9d3);
+}
+
+.container {
+  border-radius: 1.5rem 1.5rem 2rem 2rem;
+  background: var(--light-bg, #ebeae4);
+}
+
+.horizontal-line {
+  width: 100%;
+  height: 0.0625rem;
+  opacity: 0.5;
+  background: var(--dark-coffee, #3f3b37);
+}
+
+nav a {
+  color: var(--dark-coffee, #3f3b37);
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.125rem;
+}
+
+nav .nav__title a {
+  font-family: PP Editorial New;
+}
+
+nav > *:not(.nav__title) a {
+  font-family: PP Neue Montreal;
+}
+
+.italic {
+  color: var(--dark-coffee, #3f3b37);
+  font-family: "PP Editorial New Italic";
+  font-weight: 400;
+  line-height: 1.125rem;
+}
+
+.intro .intro__titles {
+  display: flex;
+  flex-direction: column;
+}
+
+.intro .intro__titles p {
+  color: var(--dark-coffee, #3f3b37);
+  font-family: PP Editorial New;
+  font-size: 2.75rem;
+  font-weight: 400;
+  line-height: 3rem;
+}
+
+.intro .intro__title:nth-child(1) {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.intro__titles .intro__title:last-child {
+  text-align: right;
+}
+
+#numbered {
+  color: var(--dark-coffee, #3f3b37);
+  font-family: "PP Editorial New Italic";
+  font-weight: 400;
+  opacity: 0.4;
+}
+
+.highlight {
+  display: flex;
+  flex-direction: column;
+}
+
+.highlight__detail {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.highlight .highlight__description {
+  color: var(--dark-coffee, #3f3b37);
+  font-family: PP Neue Montreal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.highlight .highlight__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.highlight__link a {
+  color: var(--dark-coffee, #3f3b37);
+  font-family: PP Neue Montreal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.highlight .tech-stacks {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 80%;
+}
+
+.highlight .tech-stacks p {
+  color: var(--text-on-light, #3f3b37);
+  font-family: PP Neue Montreal;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.transluent {
+  opacity: 0.5;
+}
+
+.tech-stacks .tech-stacks__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.tech-stacks .tech-stacks__tags p {
+  border-radius: 4rem;
+  border: 1px solid var(--dark-coffee, #3f3b37);
+  padding: 0.25rem 1rem;
+}
+
+.purpose,
+.purpose p:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.purpose p {
+  color: var(--dark-coffee, #3f3b37);
+  font-family: PP Neue Montreal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.next-project {
+  text-align: center;
+  border-radius: 1.5rem 1.5rem 0rem 0rem;
+  background: var(--dark-coffee);
+  padding: 5rem 1rem;
+}
+
+.next-project p {
+  color: var(--creamy-milk, #fafafa);
+  font-family: PP Neue Montreal;
+  font-weight: 400;
+}
+
+.next-project .next-project__title {
+  color: var(--text-on-dark, #fafafa);
+  font-family: PP Editorial New;
+  font-weight: 400;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 6.5rem 1rem;
+}
+
+footer .footer__titles p {
+  color: var(--dark-coffee, #3f3b37);
+  font-family: PP Editorial New;
+  font-size: 2.75rem;
+  font-weight: 400;
+  line-height: 3rem;
+}
+footer .footer__title:nth-child(2) p {
+  text-align: right;
+}
+footer .footer__titles {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+footer .footer__links ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+footer .footer__links ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+footer .footer__links li:nth-child(1) a {
+  font-family: PP Editorial New;
+}
+
+footer .footer__links a {
+  color: var(--dark-coffee, #3f3b37);
+  font-family: PP Neue Montreal;
+  font-weight: 500;
+}
+
+footer .footer__cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 60%;
+  padding: 4.625rem 0.5rem 0.5rem 0.5rem;
+  border-radius: 0rem 0rem 1rem 0rem;
+  background: var(--dark-coffee, #3f3b37);
+}
+
+footer .footer__cta .footer__cta__title {
+  color: var(--creamy-milk, #fafafa);
+  font-family: PP Neue Montreal;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.bg {
+  background-color: var(--dark-coffee);
+  border-radius: 0rem 0rem 2.5rem 2.5rem;
+}
+
+/* Mobile Styles */
+.horizontal-line {
+  margin-top: 0.5rem;
+}
+
+header {
+  padding: 2rem 1rem 0rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav > *:not(.nav__title, .menu) {
+  display: none;
+}
+
+nav .italic {
+  font-size: 1.125rem;
+}
+
+.intro .intro__titles {
+  gap: 1rem;
+  padding: 6.5rem 1rem;
+}
+
+#numbered {
+  font-size: 2.75rem;
+  line-height: 3rem;
+  margin-right: 2.5rem;
+}
+
+.thumbnail {
+  padding: 0rem 1rem 6.5rem 1rem;
+}
+
+.thumbnail > img {
+  border-radius: 0.5rem;
+}
+
+.highlight {
+  gap: 3.5rem;
+  padding: 0rem 1rem 6.5rem 1rem;
+}
+
+.highlight .highlight__description {
+  font-size: 1.875rem;
+}
+
+.highlight__link a {
+  font-size: 1.125rem;
+}
+
+.highlight .tech-stacks p {
+  font-size: 0.75rem;
+}
+
+.showcase-container {
+  display: grid;
+  grid-row-gap: 3rem;
+  padding: 0rem 1rem 5rem 1rem;
+}
+
+.showcase-container .showcase img,
+.thumbnail img {
+  border-radius: 1.5rem;
+}
+
+.thumbnail video {
+  border-radius: 1rem;
+}
+
+.purpose {
+  gap: 1rem;
+  padding: 2rem 1rem 5rem 1rem;
+}
+
+.purpose p:last-child {
+  gap: 1rem;
+}
+
+.purpose .title {
+  font-size: 1.875rem;
+}
+
+.purpose p {
+  font-size: 0.875rem;
+}
+
+.next-project p {
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+}
+
+.next-project .next-project__title {
+  font-size: 2.75rem;
+  line-height: 3rem;
+  margin-bottom: -1rem;
+}
+
+.next-project p:first-child {
+  margin-bottom: 1.5rem;
+}
+
+.next-project .horizontal-line {
+  margin-top: -0.25rem;
+  background-color: var(--creamy-milk);
+}
+
+.project__thumbnail img {
+  max-width: 20rem;
+}
+
+footer {
+  padding: 5rem 1rem 2.5rem 1rem;
+  border-radius: 1rem 1rem 2rem 2rem;
+  background: var(--coal-lemon, #caca17);
+}
+
+footer .footer__links a {
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+}
+
+/* Small Tablet Styles */
+@media all and (min-width: 600px) {
+  .purpose {
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 3.5rem;
+    padding: 2rem 2.5rem 5rem;
+  }
+
+  .purpose p:last-child {
+    max-width: 20rem;
+  }
+}
+
+/* Tablet Styles */
+@media all and (min-width: 690px) {
+  .horizontal-line {
+    margin-top: 0.75rem;
+  }
+
+  header {
+    padding: 2rem 2.5rem 0rem;
+  }
+
+  nav > :not(.nav__title, .menu) {
+    display: block;
+    display: flex;
+    gap: 1rem;
+  }
+
+  nav .menu {
+    display: none;
+  }
+
+  .intro .intro__titles {
+    gap: 2rem;
+    padding: 6.5rem 2.5rem;
+  }
+
+  .intro .intro__titles p,
+  #numbered {
+    font-size: 4.125rem;
+    line-height: normal;
+  }
+
+  .thumbnail {
+    padding: 0rem 2.5rem 6.5rem 2.5rem;
+  }
+
+  .highlight {
+    flex-direction: row;
+    gap: 5rem;
+    padding: 0rem 2.5rem 6.5rem 2.5rem;
+  }
+
+  .showcase-container {
+    row-gap: 6.5rem;
+    column-gap: 1.5rem;
+    padding: 0rem 2.5rem 6.5rem 2.5rem;
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .showcase-container .showcase img,
+  .thumbnail img,
+  .thumbnail video {
+    border-radius: 2rem;
+  }
+
+  .showcase {
+    grid-column: span 6;
+  }
+
+  .showcase__03,
+  .showcase__04,
+  .showcase__07,
+  .showcase__08 {
+    grid-column: span 3;
+  }
+
+  .next-project {
+    padding: 6.5rem 5rem;
+  }
+
+  .next-project .next-project__title {
+    font-size: 4.125rem;
+    line-height: normal;
+    margin-bottom: -2rem;
+  }
+
+  .project__thumbnail img {
+    max-width: 26rem;
+  }
+
+  footer {
+    gap: 11rem;
+    position: relative;
+    padding: 6.5rem 1.5rem 2.5rem;
+  }
+
+  footer .footer__titles p {
+    font-size: 4.125rem;
+    line-height: normal;
+  }
+
+  footer .footer__cta {
+    position: absolute;
+    top: 15rem;
+    left: 3rem;
+    min-width: 20rem;
+    padding: 6.625rem 1.375rem 1rem 1.375rem;
+    border-radius: 0rem 0rem 1.5rem 0rem;
+  }
+
+  footer .footer__cta .footer__cta__title,
+  footer .footer__links a {
+    font-size: 1.125rem;
+  }
+}
+
+@media all and (min-width: 960px) {
+  body {
+    padding: 2rem;
+  }
+
+  .intro .intro__titles {
+    padding: 12rem 2.5rem;
+  }
+
+  .intro .intro__titles p,
+  footer .footer__titles p,
+  #numbered {
+    font-size: 7.75rem;
+    line-height: 7.75rem;
+  }
+
+  .thumbnail {
+    padding: 0rem 2.5rem 12rem 2.5rem;
+  }
+
+  .highlight {
+    max-width: 86rem;
+    margin: auto;
+    justify-content: space-between;
+    padding: 0rem 2.5rem 12rem 2.5rem;
+  }
+
+  .highlight .highlight__description {
+    font-size: 1.875rem;
+    max-width: 40rem;
+  }
+
+  .highlight .tech-stacks p {
+    font-size: 1.125rem;
+  }
+
+  .tech-stacks .tech-stacks__tags p {
+    padding: 0.5rem 1rem;
+  }
+
+  .showcase-container {
+    row-gap: 11rem;
+    column-gap: 2.5rem;
+    padding: 0rem 2.5rem 12rem 2.5rem;
+  }
+
+  .purpose p:last-child {
+    font-size: 1.25rem;
+    max-width: 30rem;
+  }
+
+  .next-project {
+    padding: 12rem;
+  }
+
+  .next-project p {
+    font-size: 1.125rem;
+  }
+
+  .next-project p:first-child {
+    margin-bottom: 3.5rem;
+  }
+
+  .next-project .next-project__title {
+    font-size: 7.5rem;
+    margin-bottom: -3.5rem;
+  }
+
+  .project__thumbnail img {
+    max-width: 35rem;
+  }
+
+  footer {
+    padding: 12.5rem 2.5rem 2.5rem;
+    border-radius: 2rem 2rem;
+  }
+
+  footer .footer__cta {
+    top: 24rem;
+    left: 5rem;
+  }
+}

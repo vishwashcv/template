@@ -1,0 +1,710 @@
+/* Resets */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+/* Fonts */
+@font-face {
+  font-family: "PP Editorial New Italic";
+  src: url("../assets/fonts/PPEditorialNew-Italic.otf");
+}
+
+@font-face {
+  font-family: "PP Editorial New";
+  src: url("../assets/fonts/PPEditorialNew-Regular.otf");
+}
+
+@font-face {
+  font-family: "PP Neue Montreal";
+  src: url("../assets/fonts/PPNeueMontreal-Medium.otf");
+}
+
+/* Variables */
+:root {
+  --light-bg: #ebeae4;
+  --all-bg: #dad9d3;
+  --dark-coffee: #3f3b37;
+  --coal-lemon: #caca17;
+  --creamy-milk: #fafafa;
+}
+
+/* Base Styles */
+.container > * {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+body {
+  padding: 1rem 0.75rem 1rem 0.75rem;
+  background: var(--all-bg, #dad9d3);
+}
+
+.container {
+  border-radius: 2rem;
+  background: var(--light-bg, #ebeae4);
+}
+
+.italic {
+  font-family: "PP Editorial New Italic";
+  font-size: 2.75rem;
+  font-weight: 400;
+  line-height: 3rem;
+}
+
+.horizontal-line {
+  width: 100%;
+  height: 0.0625rem;
+  opacity: 0.5;
+  background: var(--dark-coffee, #3f3b37);
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.12rem;
+}
+
+nav .title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+nav .title a {
+  color: var(--dark-coffee, #3f3b37);
+  font-family: "PP Editorial New";
+  font-weight: 400;
+}
+
+nav .more-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+nav .more-info p {
+  color: var(--dark-coffee, #3f3b37);
+  font-family: PP Neue Montreal;
+  font-weight: 500;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.intro .intro__part {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.intro .intro__part p {
+  color: var(--dark-coffee, #3f3b37);
+  font-family: PP Neue Montreal;
+  font-size: 2.75rem;
+  font-weight: 500;
+  line-height: 3rem;
+}
+
+.part .work {
+  background: var(--dark-coffee, #3f3b37);
+}
+
+.part .work > * {
+  color: var(--creamy-milk, #fafafa);
+}
+
+.part .blog {
+  background: var(--coal-lemon, #caca17);
+}
+
+.part .blog > * {
+  color: var(--dark-coffee, #3f3b37);
+}
+
+.part .about {
+  background: var(--creamy-milk, #fafafa);
+}
+
+.part .about > * {
+  color: var(--dark-coffee, #3f3b37);
+}
+
+.about__highlights {
+  color: var(--dark-coffee, #3f3b37);
+  font-family: PP Neue Montreal;
+  font-size: 1.875rem;
+  font-weight: 500;
+}
+
+.featured,
+.project,
+.testimonials,
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 6.5rem 1rem;
+}
+
+.featured .featured__title p,
+.project .project__titles p,
+.testimonials .testimonials__titles p,
+footer .footer__titles p {
+  color: var(--dark-coffee, #3f3b37);
+  font-family: PP Editorial New;
+  font-size: 2.75rem;
+  font-weight: 400;
+  line-height: 3rem;
+}
+
+.featured .featured__title:nth-child(2) p,
+.project .project__title:nth-child(2) p,
+.testimonials .testimonials__title:nth-child(2) p,
+footer .footer__title:nth-child(2) p {
+  text-align: right;
+}
+
+.featured .featured__titles,
+.project .project__titles,
+.testimonials .testimonials__titles,
+footer .footer__titles {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.featured .featured__brands {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+}
+
+.project .project__showcases {
+  display: flex;
+  flex-direction: column;
+  gap: 5.5rem;
+}
+
+.project .project__showcase__avatar {
+  margin-bottom: 1rem;
+}
+
+.project .project__showcase__avatar img {
+  border-radius: 0rem 0rem 2rem 0rem;
+}
+
+.project .project__showcase__header {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.project .project__showcase__header .project__showcase__link {
+  margin-left: auto;
+  min-width: 2.5rem;
+}
+
+.project .project__showcase__header p:nth-child(1) {
+  color: var(--dark-coffee, #3f3b37);
+  font-family: PP Editorial New;
+  font-style: italic;
+  font-weight: 400;
+  opacity: 0.4;
+}
+
+.project .project__showcase__header p:nth-child(2) {
+  color: var(--dark-coffee, #3f3b37);
+  font-family: PP Neue Montreal;
+  font-weight: 500;
+}
+
+.testimonials .testimonials__title:nth-child(1) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.testimonials .testimonials__tweets {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  padding: 5rem 1rem 2.5rem 1rem;
+  border-radius: 1rem 1rem 2rem 2rem;
+  background: var(--coal-lemon, #caca17);
+}
+
+footer .footer__links ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+footer .footer__links li:nth-child(1) a {
+  font-family: PP Editorial New;
+}
+
+footer .footer__links a {
+  color: var(--dark-coffee, #3f3b37);
+  font-family: PP Neue Montreal;
+  font-weight: 500;
+}
+
+footer .footer__cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 60%;
+  padding: 4.625rem 0.5rem 0.5rem 0.5rem;
+  border-radius: 0rem 0rem 1rem 0rem;
+  background: var(--dark-coffee, #3f3b37);
+}
+
+footer .footer__cta .footer__cta__title {
+  color: var(--creamy-milk, #fafafa);
+  font-family: PP Neue Montreal;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* Mobile Styles */
+nav {
+  padding: 3.5rem 1rem 0rem;
+}
+
+nav .title a {
+  font-size: 2.75rem;
+  line-height: 3rem;
+  padding-bottom: 0.5rem;
+}
+
+nav .more-info p {
+  font-size: 0.5rem;
+}
+
+.intro {
+  padding: 6rem 1rem 3.5rem;
+}
+
+.intro .intro__part p {
+  padding-bottom: 0.5rem;
+}
+
+.intro .intro__part:nth-child(1) {
+  justify-content: space-between;
+}
+.intro .intro__part:nth-child(2) {
+  justify-content: flex-start;
+}
+.intro .intro__part:nth-child(3) {
+  justify-content: space-between;
+}
+
+.intro__part > .work,
+.intro__part > .blog,
+.intro__part > .about {
+  display: none;
+}
+
+.intro__nav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 3.5rem;
+}
+
+.intro__nav .intro__nav__part:nth-child(1) {
+  grid-column: span 2;
+}
+.intro__nav .intro__nav__part:nth-child(2) {
+  grid-column: span 2;
+}
+.intro__nav .intro__nav__part:nth-child(3) {
+  grid-column: span 3;
+}
+
+.intro__nav__part > .work,
+.intro__nav__part > .blog,
+.intro__nav__part > .about {
+  display: flex;
+  justify-content: space-between;
+  padding: 3.375rem 1.25rem 0.75rem 0.5rem;
+  border-radius: 0rem 0rem 1.5rem 0rem;
+}
+
+.intro__nav__part p,
+a {
+  font-family: PP Neue Montreal;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+section.about {
+  padding: 6.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about .about__el {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.about .about__el__more {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.about .about__el p {
+  color: var(--text-on-light, #3f3b37);
+  font-family: PP Neue Montreal;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.about .el__lines ul > * + * {
+  margin-top: 0.75rem;
+}
+
+.about .el__lines .el__line {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.about .el__lines .el__line p:nth-child(3) {
+  min-width: 7.125rem;
+}
+.about .el__lines .el__line p:nth-child(1) {
+  min-width: 8.5rem;
+}
+
+.about .horizontal-line,
+.featured .horizontal-line,
+.project .horizontal-line,
+.testimonials .horizontal-line,
+footer .horizontal-line {
+  margin-top: 0.5rem;
+}
+
+.featured .featured__brand {
+  grid-column: span 6;
+}
+
+.featured .featured__brand:nth-last-child(1) {
+  grid-column: 4 / span 6;
+}
+
+.project .project__showcase__header p {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.testimonials .testimonials__title:nth-child(1) img {
+  max-width: 2.75rem;
+}
+
+footer .footer__links .italic {
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.125rem;
+}
+
+footer .footer__links a {
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+}
+
+/* Tablet Styles */
+@media all and (min-width: 600px) {
+  nav {
+    padding: 3.5rem 1.5rem 0rem;
+  }
+
+  nav .title a,
+  .italic {
+    font-size: 4.125rem;
+  }
+
+  nav .title a {
+    padding-bottom: 1rem;
+  }
+
+  nav .more-info p {
+    font-size: 1rem;
+  }
+
+  .intro {
+    gap: 2rem;
+    padding: 8.5rem 1.5rem 6.5rem;
+  }
+
+  .intro .intro__part p {
+    font-size: 4.125rem;
+  }
+
+  .about__highlights {
+    font-size: 1.25rem;
+  }
+
+  .about .about__el p {
+    font-size: 0.75rem;
+  }
+
+  section.about {
+    flex-direction: row;
+    gap: 3.5rem;
+    padding: 7.5rem 2.5rem;
+  }
+
+  .featured .featured__title p,
+  .project .project__titles p,
+  .testimonials .testimonials__titles p,
+  footer .footer__titles p {
+    font-size: 4.125rem;
+  }
+
+  .featured .featured__brand {
+    grid-column: span 4;
+  }
+
+  .featured,
+  .project,
+  .testimonials {
+    gap: 5rem;
+    padding: 6.5rem 1.5rem;
+  }
+
+  .about .horizontal-line,
+  .featured .horizontal-line,
+  .project .horizontal-line,
+  .testimonials .horizontal-line,
+  footer .horizontal-line {
+    margin-top: 0.75rem;
+  }
+
+  .project .project__showcase__header p {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+
+  .project .project__showcase__avatar {
+    margin-bottom: 3rem;
+  }
+
+  .project .project__showcases {
+    gap: 6.5rem;
+  }
+
+  footer {
+    padding: 6.5rem 1.5rem 2.5rem 1.5rem;
+  }
+
+  footer .footer__links a,
+  footer .footer__links .italic,
+  footer .footer__cta .footer__cta__title {
+    font-size: 1.125rem;
+  }
+
+  footer .footer__cta {
+    min-width: 20rem;
+  }
+}
+
+@media all and (min-width: 700px) {
+  .intro__nav {
+    display: none;
+  }
+
+  .intro .intro__part {
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .intro .intro__part:nth-child(2) {
+    justify-content: space-between;
+  }
+
+  .intro__part > .work,
+  .intro__part > .blog,
+  .intro__part > .about {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-grow: 1;
+    border-radius: 0rem 0rem 1.5rem 0rem;
+    max-width: 19rem;
+    padding: 3.375rem 1.25rem 0.75rem 0.5rem;
+  }
+
+  .intro .part__blog p,
+  .intro .part__about p,
+  .intro .part__work p {
+    font-size: 0.75rem;
+    line-height: normal;
+    padding-bottom: 0;
+  }
+
+  .featured .featured__brands {
+    max-width: 40rem;
+    align-self: center;
+  }
+
+  .testimonials .testimonials__tweets {
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 1rem;
+  }
+
+  .testimonials .testimonials__tweet {
+    grid-column: span 6;
+  }
+
+  footer {
+    gap: 11rem;
+    position: relative;
+  }
+
+  footer .footer__cta {
+    position: absolute;
+    top: 12rem;
+    left: 3rem;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  body {
+    padding: 2rem;
+  }
+
+  nav {
+    padding: 3.5rem 2.5rem 0rem;
+  }
+
+  nav .title a,
+  .italic,
+  .featured .featured__title p,
+  .project .project__titles p,
+  .testimonials .testimonials__titles p,
+  footer .footer__titles p {
+    font-size: 7.75rem;
+    line-height: 7.75rem;
+  }
+
+  .intro {
+    padding: 11.5rem 2.5rem 6.5rem;
+  }
+
+  .intro .intro__part p {
+    font-size: 7.75rem;
+  }
+
+  .intro .part__blog p,
+  .intro .part__about p,
+  .intro .part__work p {
+    font-size: 0.75rem;
+  }
+
+  .intro__part > .work,
+  .intro__part > .blog,
+  .intro__part > .about {
+    padding: 5.875rem 1.25rem 0.75rem 0.5rem;
+  }
+
+  section.about {
+    padding: 9.5rem 2.5rem;
+    gap: 16rem;
+    max-width: 80rem;
+    margin: auto;
+  }
+
+  .about__highlights {
+    font-size: 1.75rem;
+  }
+
+  .about .about__el {
+    gap: 7.5rem;
+  }
+
+  .about .about__el p {
+    font-size: 1.125rem;
+  }
+
+  .about .el__lines .el__line p:nth-child(3) {
+    min-width: 9rem;
+  }
+
+  .featured,
+  .project,
+  .testimonials {
+    padding: 6.5rem 2.5rem;
+  }
+
+  .featured .featured__brands {
+    max-width: 55rem;
+  }
+
+  .project {
+    padding: 12.5rem 2.5rem;
+  }
+
+  .project .project__showcase__avatar img {
+    border-radius: 0rem 0rem 9.5rem 0rem;
+  }
+
+  .project .project__showcases {
+    gap: 12rem;
+  }
+
+  .about .horizontal-line,
+  .featured .horizontal-line,
+  .project .horizontal-line,
+  .testimonials .horizontal-line,
+  footer .horizontal-line {
+    margin-top: 1rem;
+  }
+
+  .project .project__showcase__header p {
+    font-size: 4.5rem;
+    line-height: normal;
+  }
+
+  .testimonials .testimonials__title:nth-child(1) img {
+    max-width: 7.75rem;
+  }
+
+  .testimonials .testimonials__tweet {
+    grid-column: span 4;
+  }
+
+  footer {
+    padding: 12.5rem 2.5rem 2.5rem;
+    border-radius: 2rem 2rem;
+  }
+
+  footer .footer__cta {
+    top: 28rem;
+    left: 5rem;
+  }
+}

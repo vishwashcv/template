@@ -1,0 +1,85 @@
+.cursor-dot,
+.cursor-outline {
+  opacity: 0;
+}
+
+body:hover .cursor-dot,
+body:hover .cursor-outline {
+  opacity: 1;
+}
+
+.cursor-dot {
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--coal-lemon);
+  transition: width 0.3s, height 0.3s;
+}
+
+.cursor-outline {
+  width: 5.5rem;
+  height: 5.5rem;
+  border: 2px solid var(--dark-coffee);
+  transition: border 0.3s;
+}
+
+.cursor-dot,
+.cursor-outline {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.cursor-dot.active-link,
+.cursor-dot.active-brown-link,
+.cursor-dot.active-brown-arrow-link,
+.cursor-dot.active-white-arrow-link {
+  width: 5.5rem;
+  height: 5.5rem;
+}
+
+.cursor-dot.active-brown-link,
+.cursor-dot.active-white-arrow-link {
+  background-color: var(--dark-coffee);
+}
+
+.cursor-dot.active-link::after,
+.cursor-dot.active-brown-link::after {
+  content: "view";
+  color: var(--dark-coffee);
+  font-family: "PP Neue Montreal";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cursor-dot.active-brown-arrow-link::after {
+  content: url("../assets/images/black-arrow-up-right.svg");
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cursor-dot.active-white-arrow-link::after {
+  content: url("../assets/images/white-arrow-up-right.svg");
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cursor-dot.active-brown-link::after {
+  color: var(--creamy-milk);
+}
+
+.cursor-outline.active-link,
+.cursor-outline.active-brown-link,
+.cursor-outline.active-brown-arrow-link,
+.cursor-outline.active-white-arrow-link {
+  border: 0px;
+}

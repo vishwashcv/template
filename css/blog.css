@@ -1,0 +1,464 @@
+/* Resets */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+/* Fonts */
+@font-face {
+  font-family: "PP Editorial New Italic";
+  src: url("../assets/fonts/PPEditorialNew-Italic.otf");
+}
+
+@font-face {
+  font-family: "PP Editorial New";
+  src: url("../assets/fonts/PPEditorialNew-Regular.otf");
+}
+
+@font-face {
+  font-family: "PP Neue Montreal";
+  src: url("../assets/fonts/PPNeueMontreal-Medium.otf");
+}
+
+/* Variables */
+:root {
+  --light-bg: #ebeae4;
+  --all-bg: #dad9d3;
+  --dark-coffee: #3f3b37;
+  --coal-lemon: #caca17;
+  --creamy-milk: #fafafa;
+}
+
+/* Base Styles */
+body {
+  padding: 1rem;
+  background: var(--all-bg, #dad9d3);
+}
+
+.container {
+  border-radius: 1.5rem 1.5rem 2rem 2rem;
+  background: var(--light-bg, #ebeae4);
+}
+
+.horizontal-line {
+  width: 100%;
+  height: 0.0625rem;
+  opacity: 0.5;
+  background: var(--dark-coffee, #3f3b37);
+}
+
+/* wider class added specially for locomotive scroll */
+.wider .horizontal-line {
+  height: 0.15rem;
+}
+
+nav a {
+  color: var(--dark-coffee, #3f3b37);
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.125rem;
+}
+
+nav .nav__title a {
+  font-family: PP Editorial New;
+}
+
+nav > *:not(.nav__title) a {
+  font-family: PP Neue Montreal;
+}
+
+.italic {
+  color: var(--dark-coffee, #3f3b37);
+  font-family: "PP Editorial New Italic";
+  font-weight: 400;
+  line-height: 1.125rem;
+}
+
+.intro .intro__titles {
+  display: flex;
+  flex-direction: column;
+}
+
+.intro .intro__titles p {
+  color: var(--dark-coffee, #3f3b37);
+  font-family: PP Editorial New;
+  font-size: 2.75rem;
+  font-weight: 400;
+  line-height: 3rem;
+}
+
+.intro__titles .intro__title:last-child {
+  text-align: right;
+}
+
+.highlight {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 0rem 1rem 5rem 1rem;
+}
+
+.highlight .highlight__description {
+  color: var(--dark-coffee, #3f3b37);
+  font-family: PP Neue Montreal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.highlight .tech-stacks {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.highlight .tech-stacks p {
+  color: var(--text-on-light, #3f3b37);
+  font-family: PP Neue Montreal;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.transluent {
+  opacity: 0.5;
+}
+
+.tech-stacks .tech-stacks__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.tech-stacks .tech-stacks__tags p {
+  border-radius: 4rem;
+  border: 1px solid var(--dark-coffee, #3f3b37);
+  padding: 0.25rem 1rem;
+}
+
+.blog__lists {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 5rem 1rem;
+}
+
+.blog__lists .blog__list {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.blog__list p {
+  color: var(--dark-coffee, #3f3b37);
+  font-family: PP Neue Montreal;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: normal;
+  max-width: 14rem;
+}
+
+.blog__list .org {
+  font-size: 0.75rem;
+  opacity: 0.5;
+}
+
+.blog__list .blog__list__title {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.blog__list .blog__list__title .tags {
+  color: var(--dark-coffee, #3f3b37);
+  font-family: PP Neue Montreal;
+  font-size: 0.625rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5rem; /* 240% */
+  text-transform: uppercase;
+
+  padding: 0.125rem 1rem;
+  border-radius: 4rem;
+  background: var(--coal-lemon, #caca17);
+  opacity: 1;
+  align-self: flex-start;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 6.5rem 1rem;
+}
+
+footer .footer__titles p {
+  color: var(--dark-coffee, #3f3b37);
+  font-family: PP Editorial New;
+  font-size: 2.75rem;
+  font-weight: 400;
+  line-height: 3rem;
+}
+footer .footer__title:nth-child(2) p {
+  text-align: right;
+}
+footer .footer__titles {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+footer .footer__links ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+footer .footer__links ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+footer .footer__links li:nth-child(1) a {
+  font-family: PP Editorial New;
+}
+
+footer .footer__links a {
+  color: var(--dark-coffee, #3f3b37);
+  font-family: PP Neue Montreal;
+  font-weight: 500;
+}
+
+footer .footer__cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 60%;
+  padding: 4.625rem 0.5rem 0.5rem 0.5rem;
+  border-radius: 0rem 0rem 1rem 0rem;
+  background: var(--dark-coffee, #3f3b37);
+}
+
+footer .footer__cta .footer__cta__title {
+  color: var(--creamy-milk, #fafafa);
+  font-family: PP Neue Montreal;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* Mobile Styles */
+.horizontal-line {
+  margin-top: 0.5rem;
+}
+
+header {
+  padding: 2rem 1rem 0rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav > *:not(.nav__title, .menu) {
+  display: none;
+}
+
+nav .italic {
+  font-size: 1.125rem;
+}
+
+.intro .intro__titles {
+  gap: 1rem;
+  padding: 6.5rem 1rem;
+}
+
+.highlight .highlight__description {
+  font-size: 1.875rem;
+}
+
+.highlight .tech-stacks p {
+  font-size: 0.75rem;
+}
+
+footer {
+  padding: 5rem 1rem 2.5rem 1rem;
+  border-radius: 1rem 1rem 2rem 2rem;
+  background: var(--coal-lemon, #caca17);
+}
+
+footer .footer__links a {
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+}
+
+/* Tablet Styles */
+@media all and (min-width: 690px) {
+  .horizontal-line {
+    margin-top: 0.75rem;
+  }
+
+  header {
+    padding: 2rem 2.5rem 0rem;
+  }
+
+  nav > :not(.nav__title, .menu) {
+    display: block;
+    display: flex;
+    gap: 1rem;
+  }
+
+  nav .menu {
+    display: none;
+  }
+
+  .intro .intro__titles {
+    gap: 2rem;
+    padding: 6.5rem 2.5rem;
+  }
+
+  .intro .intro__titles p {
+    font-size: 4.125rem;
+    line-height: normal;
+  }
+
+  .highlight {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5rem;
+    padding: 0rem 5rem 5rem;
+  }
+
+  .highlight .highlight__description {
+    font-size: 1.25rem;
+    max-width: 18rem;
+  }
+
+  .blog__lists {
+    gap: 1.5rem;
+    padding: 6rem 2.5rem;
+  }
+
+  .blog__list p {
+    max-width: none;
+  }
+
+  .blog__lists .blog__list {
+    gap: 1rem;
+  }
+
+  .blog__list .blog__list__title {
+    flex-direction: row;
+  }
+
+  .blog__list .blog__list__title .tags {
+    font-size: 0.75rem;
+  }
+
+  footer {
+    gap: 11rem;
+    position: relative;
+    padding: 6.5rem 1.5rem 2.5rem;
+  }
+
+  footer .footer__titles p {
+    font-size: 4.125rem;
+    line-height: normal;
+  }
+
+  footer .footer__cta {
+    position: absolute;
+    top: 15rem;
+    left: 3rem;
+    min-width: 20rem;
+    padding: 6.625rem 1.375rem 1rem 1.375rem;
+    border-radius: 0rem 0rem 1.5rem 0rem;
+  }
+
+  footer .footer__cta .footer__cta__title,
+  footer .footer__links a {
+    font-size: 1.125rem;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  body {
+    padding: 2rem;
+  }
+
+  .intro .intro__titles {
+    padding: 12rem 2.5rem;
+  }
+
+  .intro .intro__titles p,
+  footer .footer__titles p {
+    font-size: 7.75rem;
+    line-height: 7.75rem;
+  }
+
+  .highlight {
+    max-width: 86rem;
+    margin: auto;
+  }
+
+  .highlight .highlight__description {
+    font-size: 1.875rem;
+    max-width: 30rem;
+  }
+
+  .highlight .tech-stacks p {
+    font-size: 1.125rem;
+  }
+
+  .tech-stacks .tech-stacks__tags p {
+    padding: 0.5rem 1rem;
+  }
+
+  .blog__lists {
+    gap: 2rem;
+    padding: 7.5rem 5rem 10rem 5rem;
+  }
+
+  .blog__lists .blog__list {
+    gap: 2rem;
+  }
+
+  .blog__list p {
+    font-size: 1.875rem;
+  }
+
+  .blog__list .org {
+    font-size: 1.125rem;
+  }
+
+  .blog__list .blog__list__title {
+    align-items: flex-end;
+  }
+
+  footer {
+    padding: 12.5rem 2.5rem 2.5rem;
+    border-radius: 2rem 2rem;
+  }
+
+  footer .footer__cta {
+    top: 24rem;
+    left: 5rem;
+  }
+}

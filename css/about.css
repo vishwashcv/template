@@ -1,0 +1,529 @@
+/* Resets */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+/* Fonts */
+@font-face {
+  font-family: "PP Editorial New Italic";
+  src: url("../assets/fonts/PPEditorialNew-Italic.otf");
+}
+
+@font-face {
+  font-family: "PP Editorial New";
+  src: url("../assets/fonts/PPEditorialNew-Regular.otf");
+}
+
+@font-face {
+  font-family: "PP Neue Montreal";
+  src: url("../assets/fonts/PPNeueMontreal-Medium.otf");
+}
+
+/* Variables */
+:root {
+  --light-bg: #ebeae4;
+  --all-bg: #dad9d3;
+  --dark-coffee: #3f3b37;
+  --coal-lemon: #caca17;
+  --creamy-milk: #fafafa;
+}
+
+/* Base Styles */
+body {
+  padding: 1rem;
+  background: var(--all-bg, #dad9d3);
+}
+
+.container {
+  border-radius: 1.5rem 1.5rem 2rem 2rem;
+  background: var(--light-bg, #ebeae4);
+}
+
+.horizontal-line {
+  width: 100%;
+  height: 0.0625rem;
+  opacity: 0.5;
+  background: var(--dark-coffee, #3f3b37);
+}
+
+nav a {
+  color: var(--dark-coffee, #3f3b37);
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.125rem;
+}
+
+nav .nav__title a {
+  font-family: PP Editorial New;
+}
+
+nav > *:not(.nav__title) a {
+  font-family: PP Neue Montreal;
+}
+
+.italic {
+  color: var(--dark-coffee, #3f3b37);
+  font-family: "PP Editorial New Italic";
+  font-weight: 400;
+  line-height: 1.125rem;
+}
+
+.intro .intro__titles,
+.featured .featured__titles,
+.achievements .achievements__titles {
+  display: flex;
+  flex-direction: column;
+}
+
+.intro .intro__titles p,
+.featured .featured__titles p,
+.achievements .achievements__titles p {
+  color: var(--dark-coffee, #3f3b37);
+  font-family: PP Editorial New;
+  font-size: 2.75rem;
+  font-weight: 400;
+  line-height: 3rem;
+}
+
+.intro .intro__title:nth-child(1) {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.intro__titles .intro__title:last-child,
+.intro__title:nth-child(2),
+.featured .featured__title:last-child {
+  text-align: right;
+}
+
+.grown-up {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.grown-up .title,
+.grown-up p,
+.achievements p {
+  color: var(--dark-coffee, #3f3b37);
+  font-family: PP Neue Montreal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.featured .featured__brands {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+}
+
+.tags {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  padding: 6.5rem 1.5rem;
+  border-radius: 2rem;
+  background: var(--coal-lemon, #caca17);
+}
+
+.tags .tag {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.625rem 1.5rem;
+  border-radius: 0rem 0rem 2rem 0rem;
+  border: 1px solid var(--dark-coffee, #3f3b37);
+  background: var(--coal-lemon, #caca17);
+  height: 16rem;
+}
+
+.tags .tag:nth-child(1) {
+  background: var(--light-bg, #ebeae4);
+}
+
+.tags img {
+  max-width: 2.5rem;
+}
+
+.tags p {
+  color: var(--dark-coffee, #3f3b37);
+  font-family: PP Neue Montreal;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 6.5rem 1rem;
+}
+
+footer .footer__titles p {
+  color: var(--dark-coffee, #3f3b37);
+  font-family: PP Editorial New;
+  font-size: 2.75rem;
+  font-weight: 400;
+  line-height: 3rem;
+}
+footer .footer__title:nth-child(2) p {
+  text-align: right;
+}
+footer .footer__titles {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+footer .footer__links ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+footer .footer__links ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+footer .footer__links li:nth-child(1) a {
+  font-family: PP Editorial New;
+}
+
+footer .footer__links a {
+  color: var(--dark-coffee, #3f3b37);
+  font-family: PP Neue Montreal;
+  font-weight: 500;
+}
+
+footer .footer__cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 60%;
+  padding: 4.625rem 0.5rem 0.5rem 0.5rem;
+  border-radius: 0rem 0rem 1rem 0rem;
+  background: var(--dark-coffee, #3f3b37);
+}
+
+footer .footer__cta .footer__cta__title {
+  color: var(--creamy-milk, #fafafa);
+  font-family: PP Neue Montreal;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* Mobile Styles */
+.horizontal-line {
+  margin-top: 0.5rem;
+}
+
+header {
+  padding: 2rem 1rem 0rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav > *:not(.nav__title, .menu) {
+  display: none;
+}
+
+nav .italic {
+  font-size: 1.125rem;
+}
+
+.intro .intro__titles {
+  gap: 1.5rem;
+  padding: 6.5rem 1rem 5rem;
+}
+
+.intro__title:nth-child(1) p:nth-child(2) {
+  display: none;
+}
+
+.grown-up {
+  padding: 5rem 1rem;
+  gap: 1rem;
+}
+
+.grown-up .title {
+  font-size: 1.875rem;
+}
+
+.grown-up p {
+  font-size: 0.875rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.featured,
+.achievements {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 6.5rem 1rem;
+}
+
+.featured .featured__titles {
+  gap: 1.5rem;
+}
+
+.featured .featured__brand {
+  grid-column: span 6;
+}
+
+.featured .featured__brand:nth-last-child(1) {
+  grid-column: 4 / span 6;
+}
+
+.achievements {
+  gap: 2rem;
+}
+
+.achievements p {
+  font-size: 1.25rem;
+}
+
+.achievements__description {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.achievements__lists {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.achievements__lists p {
+  font-size: 0.75rem;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+footer {
+  padding: 5rem 1rem 2.5rem 1rem;
+  border-radius: 1rem 1rem 2rem 2rem;
+  background: var(--coal-lemon, #caca17);
+}
+
+footer .footer__links a {
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+}
+
+/* Tablet Styles */
+@media all and (min-width: 690px) {
+  .horizontal-line {
+    margin-top: 0.75rem;
+  }
+
+  header {
+    padding: 2rem 2.5rem 0rem;
+  }
+
+  nav > :not(.nav__title, .menu) {
+    display: block;
+    display: flex;
+    gap: 1rem;
+  }
+
+  nav .menu {
+    display: none;
+  }
+
+  .intro .intro__titles {
+    gap: 2rem;
+    padding: 6.5rem 2.5rem;
+  }
+
+  .intro__title:nth-child(1) p:nth-child(2) {
+    display: block;
+    margin-left: auto;
+  }
+
+  .intro .intro__title:nth-child(2) {
+    display: none;
+  }
+
+  .intro .intro__title:nth-child(3) p {
+    text-align: center;
+  }
+
+  .intro .intro__titles p,
+  .featured .featured__titles p,
+  .achievements .achievements__titles p {
+    font-size: 4.125rem;
+    line-height: normal;
+  }
+
+  .grown-up {
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 3.5rem;
+    padding: 6rem 2.5rem;
+  }
+
+  .grown-up p:last-child {
+    max-width: 30rem;
+  }
+
+  .featured,
+  .achievements,
+  .tags {
+    padding: 6.5rem 2.5rem;
+  }
+
+  .featured,
+  .achievements {
+    gap: 5rem;
+  }
+
+  .featured .featured__brands {
+    max-width: 40rem;
+    align-self: center;
+  }
+
+  .featured .featured__brand {
+    grid-column: span 4;
+  }
+
+  .tags .tag {
+    grid-column: span 6;
+  }
+
+  .tags .tag:nth-child(3) {
+    grid-column: span 10;
+  }
+
+  .achievements__description {
+    flex-direction: row;
+  }
+
+  .achievements__description > * {
+    width: 100%;
+  }
+
+  footer {
+    gap: 11rem;
+    position: relative;
+    padding: 6.5rem 1.5rem 2.5rem;
+  }
+
+  footer .footer__titles p {
+    font-size: 4.125rem;
+    line-height: normal;
+  }
+
+  footer .footer__cta {
+    position: absolute;
+    top: 15rem;
+    left: 3rem;
+    min-width: 20rem;
+    padding: 6.625rem 1.375rem 1rem 1.375rem;
+    border-radius: 0rem 0rem 1.5rem 0rem;
+  }
+
+  footer .footer__cta .footer__cta__title,
+  footer .footer__links a {
+    font-size: 1.125rem;
+  }
+}
+
+/* Laptop Styles */
+@media all and (min-width: 1300px) {
+  body {
+    padding: 2rem;
+  }
+
+  .intro .intro__titles,
+  .featured,
+  .achievements,
+  .tags {
+    padding: 12rem 2.5rem;
+  }
+
+  .intro .intro__titles p,
+  footer .footer__titles p,
+  .featured .featured__titles p,
+  .achievements .achievements__titles p {
+    font-size: 7.75rem;
+    line-height: 7.75rem;
+  }
+
+  .grown-up {
+    align-items: flex-start;
+  }
+
+  .grown-up p {
+    font-size: 1.125rem;
+    gap: 1.5rem;
+  }
+
+  .tags {
+    margin: auto;
+  }
+
+  .tags .tag {
+    grid-column: span 5;
+  }
+
+  .tags .tag:first-child {
+    grid-column: 2 / span 5;
+  }
+
+  .tags .tag:nth-child(3) {
+    grid-column: 2 / span 8;
+  }
+
+  .achievements p {
+    font-size: 1.875rem;
+    max-width: 32rem;
+  }
+
+  .achievements__lists p {
+    font-size: 1.125rem;
+  }
+
+  .achievements__description {
+    gap: 16rem;
+  }
+
+  footer {
+    padding: 12.5rem 2.5rem 2.5rem;
+    border-radius: 2rem 2rem;
+  }
+
+  footer .footer__cta {
+    top: 24rem;
+    left: 5rem;
+  }
+}
